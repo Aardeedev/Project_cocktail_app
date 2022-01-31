@@ -1,4 +1,9 @@
-export function Input({ inputClassName, divClassName, onChange, onKeyUp }) {
+export default function Input({
+  inputClassName,
+  divClassName,
+  onChange,
+  onKeyUp,
+}) {
   return (
     <div className={divClassName}>
       <input
