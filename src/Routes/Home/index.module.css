@@ -13,9 +13,13 @@
   height: auto;
 }
 
-.searchInput {
+.homeButton {
   padding: 10px;
-  width: 500px;
-  border: 1px solid #7aa180;
-  border-radius: 40px;
+  width: 160px;
+  border: 1.5px solid #7aa180;
+  background-color: #84b18a;
+  color: aliceblue;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 30px;
 }

@@ -1,10 +1,16 @@
 import { Image } from "../../Component/Image";
 import { H1 } from "../../Component/H1";
-import { Input } from "../../Component/Input";
 import landImage from "./land_image.png";
 import css from "./index.module.css";
+import { useState } from "react";
+import { useNavigate } from "react-router";
+import { Button } from "../../Component/Button";
+
 export function Home() {
   const landText = `Fancy a drink? We got it! Find out a drink recipe.`;
+  const btnText = `search a drink`;
+
+  let navigate = useNavigate();
 
   return (
     <div className={css.container}>
@@ -14,7 +20,11 @@ export function Home() {
         className={css.landPageImage}
       />
       <H1 text={landText} h1ClassName={css.landPageH1} />
-      <Input inputClassName={css.searchInput} />
+      <Button
+        text={btnText}
+        className={css.homeButton}
+        onClick={() => navigate("/drink")}
+      />
     </div>
   );
 }

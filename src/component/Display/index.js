@@ -1,3 +1,3 @@
-export function Display({ data }) {
-  return <p>{data}</p>;
+export function Display({ text }) {
+  return <p>{text}</p>;
 }
