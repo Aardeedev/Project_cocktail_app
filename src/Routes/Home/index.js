@@ -4,7 +4,7 @@ import { Input } from "../../Component/Input";
 import landImage from "./land_image.png";
 import css from "./index.module.css";
 export function Home() {
-  const landText = `Fancy a drink? We got it! Make yourself at home and find out a drink recipe.`;
+  const landText = `Fancy a drink? We got it! Find out a drink recipe.`;
 
   return (
     <div className={css.container}>
@@ -13,8 +13,8 @@ export function Home() {
         alt={"in drink we trust"}
         className={css.landPageImage}
       />
-      <H1 text={landText} className={css.landPageH1} />
-      <Input />
+      <H1 text={landText} h1ClassName={css.landPageH1} />
+      <Input inputClassName={css.searchInput} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
-export function Input({ inputClassName }) {
+export function Input({ inputClassName, divClassName }) {
   return (
-    <div className={inputClassName}>
-      <input type="text" />
+    <div className={divClassName}>
+      <input type="text" className={inputClassName} />
     </div>
   );
 }
