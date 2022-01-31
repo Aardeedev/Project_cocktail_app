@@ -1,5 +1,6 @@
 import { Image } from "../../Component/Image";
 import { H1 } from "../../Component/H1";
+import { Input } from "../../Component/Input";
 import landImage from "./land_image.png";
 import css from "./index.module.css";
 export function Home() {
@@ -10,11 +11,10 @@ export function Home() {
       <Image
         src={landImage}
         alt={"in drink we trust"}
-        /*        width={400}
-        height={300} */
-        className={css.imageLandPage}
+        className={css.landPageImage}
       />
-      <H1 text={landText} className={css.h1LandPage} />
+      <H1 text={landText} className={css.landPageH1} />
+      <Input />
     </div>
   );
 }

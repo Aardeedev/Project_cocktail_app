@@ -1,13 +1,7 @@
-export function Image({ src, alt, width, height, className }) {
+export function Image({ src, alt, className }) {
   return (
     <div className="imageContainer">
-      <img
-        src={src}
-        alt={alt}
-        /*         width={width}
-        height={height} */
-        className={className}
-      />
+      <img src={src} alt={alt} className={className} />
     </div>
   );
 }

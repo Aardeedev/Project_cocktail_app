@@ -1,3 +1,7 @@
-export function H1({ text, className }) {
-  return <h1 className={className}>{text}</h1>;
+export function H1({ text, h1ClassName, divClassName }) {
+  return (
+    <div className={divClassName}>
+      <h1 className={h1ClassName}>{text}</h1>
+    </div>
+  );
 }
