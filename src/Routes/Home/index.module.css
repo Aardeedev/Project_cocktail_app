@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.h1LandPage {
+  font-size: 20px;
+}
+
+.imageLandPage {
+  width: 700px;
+  height: auto;
+}
