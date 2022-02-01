@@ -3,6 +3,7 @@ export default function Input({
   divClassName,
   onChange,
   onKeyUp,
+  placeholder,
 }) {
   return (
     <div className={divClassName}>
@@ -11,6 +12,7 @@ export default function Input({
         className={inputClassName}
         onChange={onChange}
         onKeyUp={onKeyUp}
+        placeholder={placeholder}
       />
     </div>
   );

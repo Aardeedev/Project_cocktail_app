@@ -5,6 +5,8 @@ import Input from "../../Component/Input";
 import css from "./index.module.css";
 
 export function Drinks() {
+  const placeHolder = `type here and find a drink recipe`;
+
   const [input, setInput] = useState();
   function getInputText(e) {
     setInput(e.target.value);
@@ -16,19 +18,6 @@ export function Drinks() {
       setText(input);
     }
   }
-  /* 
-  const ingredients = undefined;
-
-  function sortIngredients(data) {
-    let ingredient = undefined;
-    for (let i = 0; i < 16; i++) {
-      ingredient = data.strIngredient + i;
-      if (ingredient) {
-        ingredients.push(ingredient);
-      }
-    }
-    console.log(`thi is array ingredients:` + ingredients);
-  } */
 
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -39,8 +28,6 @@ export function Drinks() {
       const data = await response.json();
       console.log(`this is your data from api: ${data.drinks[0].strDrink}`);
       setData(data.drinks[0]);
-      /*       sortIngredients(data);
-      console.log(`thi is array ingredients:`, ingredients); */
     }
     getData();
   }, [text]);
@@ -48,24 +35,23 @@ export function Drinks() {
   return (
     <div>
       <Input
+        placeholder={placeHolder}
+        divClassName={css.divInput}
         inputClassName={css.searchInput}
         onChange={getInputText}
         onKeyUp={handleEnter}
       />
-      <H1 text={data.strDrink} />
-      <Paragraph text={data.strAlcoholic} />
-      <Paragraph text={data.strGlass} />
-      <Paragraph text={data.strInstructions} />
-      <Paragraph text={data.strIngredient1} />
-      <Paragraph text={data.strIngredient2} />
-      <Paragraph text={data.strIngredient3} />
-      <Paragraph text={data.strIngredient4} />
-      <Paragraph text={data.strIngredient5} />
-      <Paragraph text={data.strIngredient6} />
-      <Paragraph text={data.strIngredient7} />
-      <Paragraph text={data.strIngredient8} />
-      <Paragraph text={data.strIngredient9} />
-      <Paragraph text={data.strIngredient10} />
+      <div className={css.recipe}>
+        <H1 text={data.strDrink} h1ClassName={css} />
+
+        <Paragraph text={data.strIngredient1} />
+        <Paragraph text={data.strIngredient2} />
+        <Paragraph text={data.strIngredient3} />
+        <Paragraph text={data.strIngredient4} />
+        <Paragraph text={data.strIngredient5} />
+
+        <Paragraph text={data.strInstructions} />
+      </div>
     </div>
   );
 }
