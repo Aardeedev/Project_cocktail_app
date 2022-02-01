@@ -6,8 +6,8 @@ import css from "./index.module.css";
 import { useNavigate } from "react-router";
 
 export function Home() {
-  const landText = `Fancy a drink? We got it! Find out a drink recipe.`;
-  const btnText = `search a drink`;
+  const landText = `Thirsty? We have hundreds and hundreds of delicious cocktail recipes from expert bartenders around the world. Make yourself at home and find out a new drink recipe.`;
+  const btnText = `search a recipe`;
 
   let navigate = useNavigate();
 
@@ -18,7 +18,11 @@ export function Home() {
         alt={"in drink we trust"}
         className={css.landPageImage}
       />
-      <H1 text={landText} h1ClassName={css.landPageH1} />
+      <H1
+        text={landText}
+        h1ClassName={css.landPageH1}
+        divH1ClassName={css.divH1}
+      />
       <Button
         text={btnText}
         className={css.homeButton}
