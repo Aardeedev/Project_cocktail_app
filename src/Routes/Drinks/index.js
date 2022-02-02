@@ -27,10 +27,23 @@ export function Drinks() {
       );
       const data = await response.json();
       console.log(`this is your data from api: ${data.drinks[0].strDrink}`);
-      setData(data.drinks[0]);
+      setData(data.drinks[0].strDrink);
+      setData(...data, data.drinks[0].strInstructions);
+      console.log(data);
+      getIngredients();
     }
     getData();
   }, [text]);
+
+  function getIngredients() {
+    const ingredients = [];
+    for (let i = 0; i < 16; i++) {
+      if (data.strIngredient + i) {
+        ingredients.push(data.strIngredient + i);
+        console.log(ingredients);
+      }
+    }
+  }
 
   return (
     <div>
@@ -42,14 +55,12 @@ export function Drinks() {
         onKeyUp={handleEnter}
       />
       <div className={css.recipe}>
-        <H1 text={data.strDrink} h1ClassName={css} />
-
+        <H1 text={data} h1ClassName={css} />
         <Paragraph text={data.strIngredient1} />
         <Paragraph text={data.strIngredient2} />
         <Paragraph text={data.strIngredient3} />
         <Paragraph text={data.strIngredient4} />
         <Paragraph text={data.strIngredient5} />
-
         <Paragraph text={data.strInstructions} />
       </div>
     </div>
