@@ -1,14 +1,15 @@
 import Paragraph from "../../Component/Paragraph";
 import H1 from "../../Component/H1";
 import H2 from "../../Component/H2";
+import DisplayRecipe from "../../Component/DisplayRecipe";
 import { useState, useEffect } from "react";
 import Input from "../../Component/Input";
 import css from "./index.module.css";
 
 export function Drinks() {
   const inputText = `type here and find a drink recipe`;
-  const ingredientsTitle = `Ingredients list`;
-  const measuresTitle = `Measures`;
+  let ingredientsTitle = "";
+  let measuresTitle = "";
 
   const [input, setInput] = useState();
   function getInputText(e) {
