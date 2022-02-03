@@ -1,7 +1,7 @@
-import Image from "../../Component/Image";
-import H1 from "../../Component/H1";
+import Image from "../../components/Image";
+import H1 from "../../components/H1";
 import landImage from "./land_image.png";
-import Button from "../../Component/Button";
+import Button from "../../components/Button";
 import css from "./index.module.css";
 import { useNavigate } from "react-router";
 

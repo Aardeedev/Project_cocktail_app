@@ -1,9 +1,9 @@
-import Paragraph from "../../Component/Paragraph";
-import H1 from "../../Component/H1";
-import H2 from "../../Component/H2";
-import DisplayRecipe from "../../Component/DisplayRecipe";
+import Paragraph from "../../components/Paragraph";
+import H1 from "../../components/H1";
+import H2 from "../../components/H2";
+import DisplayRecipe from "../../components/DisplayRecipe";
 import { useState, useEffect } from "react";
-import Input from "../../Component/Input";
+import Input from "../../components/Input";
 import css from "./index.module.css";
 
 export function Drinks() {
