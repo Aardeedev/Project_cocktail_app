@@ -1,7 +1,6 @@
 import Paragraph from "../../components/Paragraph";
 import H1 from "../../components/H1";
 import H2 from "../../components/H2";
-import DisplayRecipe from "../../components/DisplayRecipe";
 import { useState, useEffect } from "react";
 import Input from "../../components/Input";
 import css from "./index.module.css";
